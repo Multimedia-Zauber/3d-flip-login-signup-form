@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login & Signup Flip Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="flip-scene" aria-label="Login und Registrierung">
+      <div class="flip-card" id="flipCard">
+        <div class="face face-front">
+          <div class="form-wrap">
+            <h1>Login</h1>
+            <p class="subtitle">Sign in to your account</p>
+
+            <form class="auth-form" onsubmit="event.preventDefault()">
+              <label class="input-shell">
+                <span class="icon" aria-hidden="true">👤</span>
+                <input type="text" placeholder="Username" autocomplete="username" />
+              </label>
+
+              <label class="input-shell">
+                <span class="icon" aria-hidden="true">🔒</span>
+                <input id="loginPassword" type="password" placeholder="Password" autocomplete="current-password" />
+                <button class="password-toggle" type="button" data-target="loginPassword" aria-label="Passwort anzeigen">👁</button>
+              </label>
+
+              <div class="form-row">
+                <label class="remember-control">
+                  <input type="checkbox" />
+                  <span class="switch" aria-hidden="true"></span>
+                  <span>Remember me</span>
+                </label>
+                <a href="#" class="muted-link">Forgot password?</a>
+              </div>
+
+              <button class="primary-btn" type="submit">SIGN IN <span>→</span></button>
+            </form>
+
+            <p class="switch-copy">Don’t have an account? <button class="text-action" type="button" data-flip="signup">Sign up</button></p>
+          </div>
+        </div>
+
+        <div class="face face-back">
+          <div class="form-wrap">
+            <h1>Sign Up</h1>
+            <p class="subtitle">Create your account</p>
+
+            <form class="auth-form" onsubmit="event.preventDefault()">
+              <label class="input-shell">
+                <span class="icon" aria-hidden="true">👤</span>
+                <input type="text" placeholder="Username" autocomplete="username" />
+              </label>
+
+              <label class="input-shell">
+                <span class="icon" aria-hidden="true">✉</span>
+                <input type="email" placeholder="Email address" autocomplete="email" />
+              </label>
+
+              <label class="input-shell">
+                <span class="icon" aria-hidden="true">🔒</span>
+                <input id="signupPassword" type="password" placeholder="Password" autocomplete="new-password" />
+                <button class="password-toggle" type="button" data-target="signupPassword" aria-label="Passwort anzeigen">👁</button>
+              </label>
+
+              <label class="terms-row">
+                <input type="checkbox" />
+                <span>I agree to the <a href="#">Terms & Conditions</a></span>
+              </label>
+
+              <button class="primary-btn" type="submit">CREATE ACCOUNT <span>→</span></button>
+            </form>
+
+            <p class="switch-copy">Already have an account? <button class="text-action" type="button" data-flip="login">Sign in</button></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
